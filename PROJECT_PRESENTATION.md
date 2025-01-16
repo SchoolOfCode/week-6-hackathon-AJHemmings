@@ -1,8 +1,8 @@
 `Mobile Network Provider Kata`
 
-`What you'll learn`
+`What you will learn`
 
-`Users will be:`
+`Users will :`
 
 1. Working with strings and input validation
 2. Conditinal logic
