@@ -1,8 +1,9 @@
-## Mobile Network Provider Kata
+# Mobile Network Provider Kata
 
-What you will learn
+A hackathin project to build a codewars style Kata using test-driven-development.
 
-## Users will :
+
+## Users will learn :
 
 1. Working with strings and input validation
 2. Conditinal logic
@@ -11,11 +12,15 @@ What you will learn
 
 ## Overview
 
-In a distopian future the world is recovering from covid 32. The cost of living crisis is currently in it's 4th iteration due to the amount of digital interactivity being at an all time high, mobile phone network providers have put a limit on all networks. Whilst the consumers credit is universal and agreed upon each provider has decided that they will set thier own rates for phone calls and messages.
+In a dystopian future, the world is grappling with the aftermath of COVID-32. The cost-of-living crisis has entered its fourth iteration, fueled by unprecedented levels of digital interactivity. In response, mobile phone network providers have imposed strict limits on all networks.
 
-You have some hard choices to make as to how you bugdet your credit as you have family, friends, and work you will need to call throughout the month. Luckly you did research and now have a list of all the providers and tarrifs.
+Although consumer credit is now universal and universally accepted, each provider has introduced their own rates for phone calls and messages, creating a fragmented and costly communications landscape.
 
-Providers have a code at the start of each of thier users numbers that identify which provider the number is with. Here is the list:
+As a result, you're faced with difficult decisions about how to budget your limited credit. You need to stay connected with family, friends, and work contacts throughout the month—but careful planning is essential.
+
+Fortunately, your research has paid off: you've compiled a list of all the providers and their tariffs. Each provider uses a unique code at the start of their users' phone numbers, making it possible to identify which network you're interacting with. Armed with this information, it's time to strategize and make every credit count.
+
+Here is the list of providers and their codes:
 
 `07107` -  O2\
 `07400`	-  Three\
@@ -34,7 +39,9 @@ Create a function `findProvider` that will take a integer `n` and return a strin
 
 ## Expected output
 
-input 07445347505 | output  Network Provider: Three
+input 074005347505 = > output "Three"
+
+input 209458673495 = > output "Unknown Provider"
 
 ## Constraints
 
@@ -54,11 +61,11 @@ The function skeleton is provided in `main.js`
 
 1. Clone this project to your local machine:
 ```bash
-git clone git@github.com:SchoolOfCode/week-6-hackathon-skudz96.git
+git clone https://github.com/SchoolOfCode/week-6-hackathon-AJHemmings
 ```
 2. Navigate to the project folder:
 ```bash
-cd week-6-hackathon-skudz96
+cd week-6-hackathon-AJHemmings
 ```
 3. Install packages (should download vitest):
 ```bash
