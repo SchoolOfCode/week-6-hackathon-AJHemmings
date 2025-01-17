@@ -1,114 +1,84 @@
-# Make your own Codewars Style Challenge
+# Mobile Network Provider Kata
 
-In this workshop, you'll create your own programming challenge for others to solve, similar to the ones you might have tackled on Codewars. You'll write unit tests to validate solutions. Then you can share your challenge with other bootcampers for them to solve. If a submitted solution passes all your tests, it will be considered a correct solution - just like on Codewars. This is a great chance to get creative and come up with a programming challenge to stump your peers!
+A hackathin project to build a codewars style Kata using test-driven-development.
 
-## 💡 OBJECTIVES FOR THE WORKSHOP
 
-Here's a glimpse of what you'll be achieving by the end of this workshop:
+## Users will learn :
 
-- Clearly describing a problem/task that you want others to solve
-- Writing unit tests to check whether their solution to your task is correct
-- Present your project plan, story, and anything else you feel supports your creation process and final outcome in a document
+1. Working with strings and input validation
+2. Conditinal logic
+3. Testing and Debugging
+4. Problem Solving
 
-## 🎟️ TICKETS
+## Overview
 
-Time to dive into action! 🏊‍♂️ Here's what you'll be working on:
+In a dystopian future, the world is grappling with the aftermath of COVID-32. The cost-of-living crisis has entered its fourth iteration, fueled by unprecedented levels of digital interactivity. In response, mobile phone network providers have imposed strict limits on all networks.
 
-### 🎫 Ticket 1 - Setup
+Although consumer credit is now universal and universally accepted, each provider has introduced their own rates for phone calls and messages, creating a fragmented and costly communications landscape.
 
-Install Vitest and optionally set up an NPM `test` script that conveniently runs your tests.
+As a result, you're faced with difficult decisions about how to budget your limited credit. You need to stay connected with family, friends, and work contacts throughout the month—but careful planning is essential.
 
-You will be making one kata each, but you will be in development teams. The aim is to co-elevate each other. There are several ways you can and should look to help each other:
+Fortunately, your research has paid off: you've compiled a list of all the providers and their tariffs. Each provider uses a unique code at the start of their users' phone numbers, making it possible to identify which network you're interacting with. Armed with this information, it's time to strategize and make every credit count.
 
-- Brainstorming: Helping each make your ideas better, and giving feedback to each other to add different perspectives and improve the end product
-- Planning: You can help validate each others plans, and sense check in a team review the direction of your products
-- Check-ins: Regular team stand-ups / check-ins will help make sure you are building and making progress together
-- Support: You should aim to help each other overcome issues if one of your team is stuck and cannot Google their way out of it
-- Testing: You can act as a first line user test for each others katas. You might find it a good idea to book in regular checkpoints to demo to each other and get initial feedback in quick bursts, making sure you can build in and adapt to any useful feedback before official release of your katas
+Here is the list of providers and their codes:
 
-### 🎫 Ticket 2 - Plan your kata
+`07107` -  O2\
+`07400`	-  Three\
+`07551`	-  Vodafone\
+`07550` -  EE / T-Mobile\
+`07777`	-  BT\
+`07448`	-  Lycamobile\
+`07666` -  Skynet
 
-Attack this as you would any other problem - plan, plan, plan and use our agile approach to create steps that allow you to build MVPs and incrementally reach your stretch goals. Brainstorm options with a technique like Disney Ideation. Once you have a compelling challenge and story idea, start breaking it down. Think about the goals of your challenge, and the scenarios you could provide to test if people have reached those goals. Provide any examples or additional details that are necessary for someone taking on your kata to understand the problem, but don't give away so much that it removes the challenge. You want to strike a balance - not too vague but not spoon-feeding the solution either.
 
-Write your kata's scenario in a comment in `main.js` and include the start of an exported function that your audience will use to solve it (like you've seen on the katas you've done before). If it's useful to see an example:
+## Problem statement:
 
-```js
-/**
- * Hello challenger! Your task is to write a function named `transformLength` which takes in a string and returns 1 if the length of the string is even and otherwise -1.
- *
- * Your implementation should handle strings whose length is between 0 (inclusive) and 2500 (inclusive).
- *
- * A few examples:
- *    `transformLength("table")` should return -1 as the length of "table" is not even
- *    `transformLength("wizard")` should return 1 as the length of "wizard" is even
- */
-export function transformLength(string) {
-  // Good luck!
-}
-```
+Create a function `findProvider` that will take a integer `n` and return a string matching the provider to the number or `Unknown Provider` if no matches are found.
 
-ℹ️ The reason for leaving the function body empty is that you want the people solving your kata to write their own implementation from scratch. Your role is to provide the overall problem statement and function skeleton. The solving and coding is up to them! Leaving an incomplete skeleton function helps point them in the right direction without giving away a full working solution.
 
-### 🎫 Ticket 3 - Write your kata
 
-When drafting your test cases, consider the different inputs that could be passed to the solution function and any edge cases you want to account for. You could put into practice tools such as Equivalency Partitioning, Boundary Value Analysis, and Decision Tables if its useful. Think of test values that will thoroughly cover the expected functionality. The number of tests is up to you, but aim for sufficient coverage to validate correctness.
+## Expected output
 
-Since you'll write tests before seeing people's solutions, focus on defining expected outputs for given inputs, without assumptions about how people actually wrote the code. You're testing for outcomes. You could follow a TDD workflow - write a failing test, then temporarily add code to pass it. Just be sure to remove the solution code before sharing the kata. This helps ensure your tests fail when logic is missing or incorrect and pass when implemented properly.
+input 074005347505 = > output "Three"
 
-If it's useful to see an example (continuing the `checkLength` example from earlier):
+input 209458673495 = > output "Unknown Provider"
+
+## Constraints
+
+While `n` is an integer the key value pair are strings.
+
+## Implementation
+
+The function skeleton is provided in `main.js`
 
 ```js
-import { test, expect } from "vitest";
-import { checkLength } from "./main.js";
-
-test("should return -1 for strings with an odd length", () => {
-  const expected = -1;
-  const actual = checkLength("table");
-  expect(actual).toBe(expected);
-});
-
-test("should return 1 for strings with an even length", () => {
-  const expected = 1;
-  const actual = checkLength("wizard");
-  expect(actual).toBe(expected);
-});
+ function findProvider(n) {
+    // write your code here
+    }
 ```
 
-🎯 At this stage you should have a description of the problem in `main.js` and some tests in `main.test.js`.
+## Want to try?
 
-### 🎫 Ticket 4 - Check your tests
-
-To verify your tests, temporarily add a working implementation to the solution function in `main.js`. Check that the tests fail before implementation and pass when the function is coded correctly. This validates that your tests accurately check for both incorrect and correct solutions. Remember to remove the solution code afterwards before sharing the kata.
-
-If it's useful to see an example (continuing the `checkLength` example from earlier):
-
-```js
-export function checkLength(string) {
-  // Temporarily added the line below to check if tests pass, but will remove it before committing and pushing.
-  return string.length % 2 === 0 ? 1 : -1;
-}
+1. Clone this project to your local machine:
+```bash
+git clone https://github.com/SchoolOfCode/week-6-hackathon-AJHemmings
 ```
-
-### 🎫 Ticket 5 - Share your kata
-
-Before pushing your final kata repository, be sure to remove any solution code you added for test validation. You want to provide only the kata description, skeleton function, and test cases - no actual solutions. Once ready, share your repo link in the [learn.schoolofcode.co.uk Hackathon Channel](https://learn.schoolofcode.co.uk/path-player?courseid=bc17-qe&unit=66acf966524bf23f05018063Unit) so other bootcampers can find it, clone it, implement solutions, and run your tests to check their progress. This allows them to solve the programming challenge you've created!
-
-Share it with following format:
-
+2. Navigate to the project folder:
+```bash
+cd week-6-hackathon-AJHemmings
 ```
-Room: REPLACE_ME_WITH_YOUR_ROOM_NUMBER
-Name: REPLACE_ME_WITH_YOUR_NAME
-Link: REPLACE_ME_WITH_A_LINK_TO_YOUR_PUBLIC_GITHUB_REPO_CONTAINING_THE_KATA
-Overview: REPLACE_ME_WITH_A_BRIEF_DESCRIPTION_OF_WHAT_YOUR_KATA_IS_ABOUT
+3. Install packages (should download vitest):
+```bash
+npm install
 ```
+In case you don't see vitest in the package.json:
+```bash
+npm install vitest
+```
+4. Run the test script, head over to main.js, and see the test feedback in the console! 
+```bash
+npm run test
+```
+Good luck!
 
-If it's not public already, remember to change the visibility of your repository to public.
-
-### 🎫 Ticket 6 - Present you kata
-
-Make sure you present your project in [the markdown file here](/PROJECT_PRESENTATION.md) - this will be assessed alongside your actual kata. Treat this as an asynchronous presentation - anything you would want to talk through (plans, brainstorming, final results, user feedback, etc) should go in here.
-
-### 🎫 Ticket 7 - Complete katas from others
-
-To solve katas created by other bootcampers, first clone their repository using the shared link. `cd` into the folder, run `npm install` to get the dependencies, then implement a solution in main.js. Execute their test cases to validate your code against their requirements. Provide feedback on the clarity of their instructions, difficulty level, and effectiveness of the tests. Engaging with each other's challenges allows everyone to learn. Make sure to critique respectfully - creating a programming challenge is difficult!
 
