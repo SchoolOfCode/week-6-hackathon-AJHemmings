@@ -1,12 +1,12 @@
 # Mobile Network Provider Kata
 
-A hackathin project to build a codewars style Kata using test-driven-development.
+A hackathon project to build a Code-wars style Kata using test-driven-development.
 
 
 ## Users will learn :
 
 1. Working with strings and input validation
-2. Conditinal logic
+2. Conditional logic
 3. Testing and Debugging
 4. Problem Solving
 
